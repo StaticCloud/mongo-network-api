@@ -33,7 +33,7 @@ const ThoughtSchema = new Schema({
     thoughtText : {
         type: String,
         required: true,
-        validate: /.+{1,280}/
+        validate: /.{1,280}/
     },
     createdAt : {
         type: Date,
