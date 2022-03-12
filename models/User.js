@@ -11,11 +11,7 @@ const UserSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        validate: {
-            validator: email => {
-                return /^.+@.+\..{3,6}$/.test(email);
-            }
-        }
+        validate: /^.+@.+\..{3,6}$/
     },
     thoughts: [
         {

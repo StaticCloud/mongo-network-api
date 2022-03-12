@@ -33,8 +33,7 @@ const ThoughtSchema = new Schema({
     thoughtText : {
         type: String,
         required: true,
-        minLength: 1,
-        maxlength: 280
+        validate: /.+{1,280}/
     },
     createdAt : {
         type: Date,
