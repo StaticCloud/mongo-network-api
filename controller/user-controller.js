@@ -17,6 +17,13 @@ const userController = {
             console.error(err);
             res.status(400).json(err);
         })
+    },
+
+    // create user
+    createUser({ body }, res) {
+        User.create(body)
+        .then(data => res.json(data))
+        .catch(err => res.status(400).json(err));
     }
 }
 
